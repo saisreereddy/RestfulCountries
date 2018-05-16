@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+.api_style{
+    text-decoration: none;
+    color: crimson;
+}
+.form-control-custom{
+display: inline-block;
+width: 26%;
+margin:0 auto;
+margin-left:2vw;
+height: 34px;
+padding: 6px 12px;
+font-size: 14px;
+line-height: 1.42857143;
+color: #555;
+background-color: #fff;
+background-image: none;
+border: 1px solid #ccc;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+.card {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 2vh;
+}
+.red{
+    border:2px solid indianred;
+}
+.black{
+    border:2px solid black;
+}
+.crimson{
+    border:2px solid crimson;
+}
+.font-weight{
+    font-weight: bold;
+}
+.green{
+    border:2px solid chartreuse;
+}
+.blue{
+    border:2px solid lightblue;
+}
+.well_style{
+    width:50%;
+    margin:0 auto;
+    margin-top: 0.5vh !important;
+}
+.title_style{
+    color:black;
+    font-size: 28px;
+    font-weight: bold;
+}
+.img1_style{
+    height:6rem;
+    margin:0 auto;
+}
+.container-fluid-1{
+    margin-top:auto;
+    padding-top:4px;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+    color: black;
+    font-size: 20px;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 6vh;
+    margin-top: 6vh;
+    
+    
+}
+.zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+.img-responsive-custom{
+    width:100%;
+    height:150px;
+}
+.button-custom{
+    background: lightcoral;
+    color: black;
+    font-weight: bold;
+    border: 1.5px solid black;
+}
+.card-text{
+    margin-bottom: 0.5vh;
+    margin-top: 0.5vh;
+}
+.font-size-big{
+    font-size: 30px;
+}

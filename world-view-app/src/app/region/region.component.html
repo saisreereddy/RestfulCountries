@@ -1,0 +1,58 @@
+
+
+  <div class="container-fluid" style="text-align:center">
+    <div class="row" style="text-align:center"></div>
+      <div class="col-md-12" style="font-size:20px;font-weight:bold">Welcome to the <span  style="cursor:pointer;"class="api_style" title="Regions">Regions </span>of the World</div>
+      <br>
+      <div class="col-md-12" style="font-size:16px;">(Please Visit the regions to explore the countries in it)</div>
+      <br><br>
+      
+    </div>
+    <div class="row" style="text-align:center">
+      <div>
+
+          <select class="form-control-custom" [(ngModel)]="selected" (ngModelChange)="onSelect(selected)" placeholder="Filter Category By">
+              <option  [ngValue]="undefined"selected >Get Countries By Currency Name</option>
+              <ng-container *ngFor="let country of allData;">
+                <option *ngFor="let currency of country.currencies"> {{currency.name}} </option>
+              </ng-container>    
+          </select>
+       
+      
+            <select class="form-control-custom" [(ngModel)]="selected" (ngModelChange)="onSelectLanguage(selected)" placeholder="Filter Category By">
+                <option  [ngValue]="undefined"selected >Get Countries By Language Name</option>
+                <ng-container *ngFor="let country of allData;">
+                  <option *ngFor="let language of country.languages"> {{language.name}} </option>
+                </ng-container>    
+            </select>
+         
+       
+              <select class="form-control-custom" [(ngModel)]="selected" (ngModelChange)="onSelectRegion(selected)" placeholder="Filter Category By">
+                  <option  [ngValue]="undefined"selected >Get Countries By Region</option>
+              
+                    <option *ngFor="let region of allRegions"> {{region}} </option>
+                 
+              </select>
+            
+        <br><br>
+        
+        <div *ngFor="let region of allRegions "> 
+          <div *ngIf="region">
+            <div class="container zoom col-md-4">
+            
+            <img src="assets\Images\globe3.png" alt="Card image" style="width:50%">
+         
+          
+              <div class="centered"><a [routerLink]="['/countryview',{ regionid : region }]" style="text-decoration:none;">{{region}}</a></div>
+            </div>
+        </div>
+        </div>
+  
+  
+        <br/>
+      
+  
+    </div>
+  
+  </div>
+  

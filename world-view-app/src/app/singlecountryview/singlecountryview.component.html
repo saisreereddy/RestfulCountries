@@ -1,0 +1,123 @@
+
+
+  <div class="container-fluid" style="text-align:center">
+      
+    </div>
+    <div class="row" style="text-align:center">
+      <div>
+       <!--   <select class="form-control-custom" [(ngModel)]="selected" (ngModelChange)="onSelect(selected)" placeholder="Filter Category By">
+              <option [ngValue]="undefined"selected>Filter Category By</option>
+            <option value="books">Books</option>
+            <option value="characters">Characters</option>
+            <option value="houses">Houses</option>
+        </select>-->
+      
+        <div *ngFor="let info of selectedCountry"> 
+          <div class="text-center font-weight font-size-big"><span style="color:crimson;">{{info.name}}</span></div>
+            <div class="">
+                <img src={{info.flag}} alt="Card image" style="width:95%">
+             </div>
+            
+          <div id="countries" class="col-md-6" style="margin-top:4vh;">
+          <div *ngIf="info" class="card crimson font-weight">
+              <h4 class="card-title">Basic Details of <span style="color:crimson;">{{info.name}}</span></h4>
+              <div class="card-header"></div>
+              <div class="card-body"> 
+                  <div class="card-text">Capital : {{info.capital}}</div>
+                  <div class="card-text">Native Name : {{info.nativeName}}</div>
+                  <div class="card-text">Subregion : {{info.subregion}}</div>
+                  <div class="card-text">Alpha2code : {{info.alpha2Code}}</div>
+                  <div class="card-text">Alpha3code : {{info.alpha3Code}}</div>
+                  <div class="card-text">Region : {{info.region}}</div>
+                  <div class="card-text">Population : {{info.population}}</div>
+                  <div class="card-text">Demonym : {{info.demonym}}</div>
+                  <div class="card-text">Area : {{info.area}}</div>
+                  <div class="card-text">Numeric Code : {{info.numericCode}}</div>
+                  <div class="card-text">CIOC : {{info.cioc}}</div>
+              </div> 
+              <div class="card-footer"></div>
+            </div>
+        </div>
+     
+        <div id="countries" class="col-md-6" style="margin-top:4vh;">
+            <div *ngIf="info" class="card crimson font-weight">
+                <h4 class="card-title">Languages in <span style="color:crimson;">{{info.name}}</span></h4>
+                <div class="card-header"></div>
+                <div class="card-body"> 
+                    <div *ngFor="let language of info.languages;">
+                    <div class="card-text">{{language.name}}</div>
+                    
+                  
+                    </div>
+                </div> 
+                <div class="card-footer"></div>
+              </div>
+          </div>
+
+          <div id="countries" class="col-md-6" style="margin-top:4vh;">
+              <div *ngIf="info" class="card crimson font-weight">
+                  <h4 class="card-title">Currencies in <span style="color:crimson;">{{info.name}}</span></h4>
+                  <div class="card-header"></div>
+                  <div class="card-body"> 
+                      <div *ngFor="let currency of info.currencies;">
+                      <div class="card-text">{{currency.name}}</div>
+                      
+                    
+                      </div>
+                  </div> 
+                  <div class="card-footer"></div>
+                </div>
+            </div>
+
+            <div id="countries" class="col-md-6" style="margin-top:4vh;">
+                <div *ngIf="info" class="card crimson font-weight">
+                    <h4 class="card-title">Regional Blocs in <span style="color:crimson;">{{info.name}}</span></h4>
+                    <div class="card-header"></div>
+                    <div class="card-body"> 
+                        <div *ngFor="let rb of info.regionalBlocs;">
+                        <div class="card-text">{{rb.name}}</div>
+                        
+                      
+                        </div>
+                    </div> 
+                    <div class="card-footer"></div>
+                  </div>
+              </div>
+              <div id="countries" class="col-md-6" style="margin-top:4vh;">
+                  <div *ngIf="info" class="card crimson font-weight">
+                      <h4 class="card-title">Calling Codes in <span style="color:crimson;">{{info.name}}</span></h4>
+                      <div class="card-header"></div>
+                      <div class="card-body"> 
+                          <div *ngFor="let cc of info.callingCodes;">
+                          <div class="card-text">{{cc}}</div>
+                          
+                        
+                          </div>
+                      </div> 
+                      <div class="card-footer"></div>
+                    </div>
+                </div>
+                <div id="countries" class="col-md-6" style="margin-top:4vh;">
+                    <div *ngIf="info" class="card crimson font-weight">
+                        <h4 class="card-title">Borders for <span style="color:crimson;">{{info.name}}</span></h4>
+                        <div class="card-header"></div>
+                        <div class="card-body"> 
+                            <div *ngFor="let border of info.borders;">
+                            <div class="card-text">{{border}}</div>
+                            
+                          
+                            </div>
+                        </div> 
+                        <div class="card-footer"></div>
+                      </div>
+                  </div>
+        </div>
+  
+  
+        <br/>
+      
+  
+    </div>
+  
+  </div>
+  
