@@ -34,7 +34,7 @@ import { FilterPipe } from './filter.pipe';
     HttpClientModule,
     FormsModule,
     Ng4LoadingSpinnerModule.forRoot(),
-    RouterModule.forRoot([
+    RouterModule.forRoot((routes, {useHash: true})[
       {path: 'region', component: RegionComponent},
       {path: '', redirectTo: 'region', pathMatch: 'full'},
       {path: 'about', component: AboutComponent},
